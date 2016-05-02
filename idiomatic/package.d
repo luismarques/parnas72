@@ -28,7 +28,7 @@ auto asWordLists(Range)(Range range)
     return range
         .lineSplitter
         .map!(line => line
-            .splitter!(chr => chr.isWhite)
+            .splitter!isWhite
             .filter!(word => !word.empty));
 }
 

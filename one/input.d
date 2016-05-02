@@ -33,7 +33,7 @@ void readLines(string filename)
 
         // normalize the spacing between words
         .map!(line => line
-            .splitter!(c => c.isWhite)
+            .splitter!isWhite
             .filter!(c => !c.empty)
             .joiner([wordSeparator]))
 

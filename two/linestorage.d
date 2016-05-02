@@ -17,7 +17,7 @@ enum maxWordsPerLine = WordNum.max; /// (original name: p2)
 enum maxCharsPerWord = CharNum.max; /// (original name: p3)
 
 
-/// Returns one character from a given word, present at a given line number.
+/// Returns one character from a given word at a given line number.
 /// (original name: WORD)
 char wordChar(LineNum lineNum, WordNum wordNum, CharNum charNum)
 {
@@ -72,7 +72,7 @@ void setWordChar(LineNum lineNum, WordNum wordNum, CharNum charNum, char charVal
 }
 
 /// Returns the number of lines currently being stored in memory.
-// original name: LINES
+/// (original name: LINES)
 LineNum numLines()
 {
     return lineIndex.length;
@@ -88,7 +88,8 @@ LineNum numWords(LineNum lineNum)
     return wordsForLine(lineNum).walkLength;
 }
 
-// original name: CHARS
+/// Returns the number of characters in a word.
+/// (original name: CHARS)
 CharNum numCharacters(LineNum lineNum, WordNum wordNum)
 {
     assert(lineNum >= 0 && lineNum < numLines);
@@ -109,7 +110,7 @@ void removeWord(LineNum lineNum, WordNum wordNum)
 }
 
 /// Removes a line
-// original name: DELINE
+/// (original name: DELINE)
 void removeLine(LineNum lineNum)
 {
     assert(lineNum >= 0 && lineNum < numLines);
